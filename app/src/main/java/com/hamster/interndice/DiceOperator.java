@@ -63,6 +63,11 @@ public class DiceOperator {
                     /* ...to fill the targets one by one. */
                     VoluntaryUtils.confirmAll(currentVoluntary, currentRound);
                 }
+
+                /* Prepare for next destination.
+                 * currentVoluntary is findAllVoluntaryWithDest'ed from this destination.
+                 */
+                currentVoluntary = VoluntaryUtils.getAllRemaining(allVoluntary);
             }
         }
 
