@@ -16,6 +16,11 @@ public class Voluntary {
         return isConfirmed;
     }
 
+    /**
+     * Confirm this voluntary at given ordinal
+     *
+     * @param ordinal confirm this ordinal
+     */
     public void confirm(int ordinal) {
         if (!isConfirmed) {
             isConfirmed = true;

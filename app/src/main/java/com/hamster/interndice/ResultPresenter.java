@@ -4,6 +4,8 @@ import android.util.Log;
 
 /**
  * Created by hamster on 16/6/1.
+ *
+ * Print the result. This is way too weak, maybe we can improve it, a lot.
  */
 public class ResultPresenter {
     private static ResultPresenter instance = new ResultPresenter();
@@ -17,7 +19,6 @@ public class ResultPresenter {
     }
 
     public void printSingleLine(String line) {
-        // TODO Use log for now
         Log.i(TAG, "printSingleLine: " + line);
     }
 }

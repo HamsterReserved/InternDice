@@ -2,31 +2,30 @@ package com.hamster.interndice;
 
 /**
  * Created by hamster on 16/6/1.
+ *
+ * All possible destinations and number of their offers.
  */
 public class Destinations {
     public static class DestDesc {
         private String description;
-        private int availablePosititons;
-
-        private DestDesc() {
-        }
+        private int availablePositions;
 
         private DestDesc(String desc, int pos) {
             description = desc;
-            availablePosititons = pos;
+            availablePositions = pos;
         }
 
         public String getDescription() {
             return description;
         }
 
-        public int getAvailablePosititons() {
-            return availablePosititons;
+        public int getAvailablePositions() {
+            return availablePositions;
         }
 
         public void occupyOne() {
-            if (availablePosititons > 0) {
-                availablePosititons--;
+            if (availablePositions > 0) {
+                availablePositions--;
             } else {
                 ResultPresenter.getInstance().printSingleLine("ERROR: " + description + " is already fully booked!");
             }
