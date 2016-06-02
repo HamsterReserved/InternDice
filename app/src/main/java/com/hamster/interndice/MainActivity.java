@@ -3,8 +3,6 @@ package com.hamster.interndice;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         DiceOperator operator = new DiceOperator();
-
+/*
         ArrayList<Destinations.DestDesc> desc1 = new ArrayList<>(3);
         desc1.add(Destinations.DEST_NANJING_PANNENG);
         desc1.add(Destinations.DEST_NANJING_PANNENG);
@@ -43,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         desc5.add(Destinations.DEST_SHANGHAI_SIYUAN);
         desc5.add(Destinations.DEST_NANJING_PANNENG);
         operator.addVoluntary("D5", desc5);
-
+*/
+        VoteFileParser.parse(operator, "./233.txt");
         operator.run();
     }
 }
